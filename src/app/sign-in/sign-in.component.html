@@ -1,0 +1,49 @@
+<div class="main">
+  <div class="container">
+    <div class="login">
+      <div class="heading">Login</div>
+      <form [formGroup]="details" (ngSubmit)="saveUserDetails()">
+        <div class="row col-md-12">
+          <div class="form-group">
+            <label for="email"> Email </label>
+            <input
+              class="form-control"
+              id="email"
+              type="email"
+              formControlName="email"
+            />
+            <div
+              *ngIf="
+                details.get('email')?.hasError('required') &&
+                details.get('email')?.touched
+              " class="inv"
+            >
+              Please enter your Email
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-12">
+          <div class="form-group" >
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              id="password"
+            />
+            <div
+              *ngIf="
+                details.get('password')?.hasError('required') &&
+                details.get('password')?.touched" class="inv">
+              Password is required
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="!details.valid">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+      
