@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+.main {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+.login {
+    width: 420px;
+    height: 420px;
+    color: gray;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.heading {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color:  #4F4F4F;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500px;
+    font-size: 18px;
+    color: #4F4F4F;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0%;
+}
+
+.login input[type="email"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #a1c4fd;
+    background: transparent;
+    outline: none;
+    height: 20px;
+}
+
+.inv {
+    color: rgb(243, 77, 77);
+}
+}

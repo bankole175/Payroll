@@ -1,0 +1,85 @@
+<div class="container col-md-12">
+  <div class="sign-up">
+    <div class="heading">Sign Up</div>
+    <form [formGroup]="details" (ngSubmit)="saveUserDetails()">
+      <div class="row">
+        <div class="col-md-12">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            id="firstName"
+          />
+          <div
+            *ngIf="details.get('firstName')?.hasError('required') &&
+              details.get('firstName')?.touched">
+            Please enter first Name
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            id="lastName"
+          />
+          <div
+            *ngIf="
+              details.get('lastName')?.hasError('required') &&
+              details.get('lastName')?.touched">
+            Please enter first Name
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="email"> Email: </label>
+          <input
+            class="form-control"
+            id="email"
+            type="email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="
+              details.get('email')?.hasError('required') &&
+              details.get('email')?.touched
+            "
+          >
+            Please enter your Email
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="phone"> Phone Number: </label>
+          <input
+            id="phone"
+            class="form-control"
+            type="tel"
+            formControlName="phoneNumber"
+            [class.invalid]="details.get('phoneNumber')?.invalid"
+          />
+        </div>
+        <div class="col-md-12">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            id="password"
+          />
+          <div
+            *ngIf="
+              details.get('password')?.hasError('required') &&
+              details.get('password')?.touched
+            "
+          >
+            Password is required
+          </div>
+        </div>
+      </div>
+      <button class="btn" [disabled]="!details.valid">
+        Save
+      </button>
+    </form>
+  </div>
+</div>

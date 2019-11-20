@@ -7,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  // setStyle() {
+  //   let styles = {
+  //     'background':
+  //    }
+  //   return 'url(\'../../assets/images/payroll.jpg\')';
+  // }
+
   constructor() { }
+
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 
   ngOnInit() {
   }
