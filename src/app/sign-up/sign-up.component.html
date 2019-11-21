@@ -1,85 +1,112 @@
-<div class="container col-md-12">
-  <div class="sign-up">
-    <div class="heading">Sign Up</div>
-    <form [formGroup]="details" (ngSubmit)="saveUserDetails()">
-      <div class="row">
-        <div class="col-md-12">
-          <label for="firstName">First Name</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="firstName"
-            id="firstName"
-          />
-          <div
-            *ngIf="details.get('firstName')?.hasError('required') &&
-              details.get('firstName')?.touched">
-            Please enter first Name
+<div class="main">
+    <div class="field">
+        <div class="container col-md-12">
+      <div class="heading">Sign Up</div>
+      <form [formGroup]="details" (ngSubmit)="saveUserDetails()">
+        <div class=" sign-up row">
+          <div class="row">
+              <div class="col-md-6">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    formControlName="firstName"
+                    id="firstName"
+                  />
+                  <div
+                    *ngIf="details.get('firstName')?.hasError('required') &&
+                      details.get('firstName')?.touched">
+                    Please enter First Name
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    formControlName="lastName"
+                    id="lastName"
+                  />
+                  <div
+                    *ngIf="
+                      details.get('lastName')?.hasError('required') &&
+                      details.get('lastName')?.touched">
+                    Please enter Last Name
+                  </div>
+                </div>
+          </div>
+          <div class="row">
+              <div class=" wider col-md-12">
+                  <input
+                    id="email"
+                    placeholder="Email"
+                    type="email"
+                    formControlName="email"
+                  />
+                  <div
+                    *ngIf="
+                      details.get('email')?.hasError('required') &&
+                      details.get('email')?.touched
+                    "
+                  >
+                    Please enter your Email
+                  </div>
+                </div>
+          </div>
+          <div class="row">
+              <div class=" wider col-md-12">
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Phone Number"
+                    formControlName="phoneNumber"
+                    [class.invalid]="details.get('phoneNumber')?.invalid"
+                  />
+                </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    formControlName="password"
+                    id="password"
+                  />
+                  <div
+                    *ngIf="
+                      details.get('password')?.hasError('required') &&
+                      details.get('password')?.touched
+                    "
+                  >
+                    Password is required
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <input
+                      type="password"
+                      placeholder=" Confirm Password"
+                      formControlName="confirmPassword"
+                      id="confirmPassword"
+                    />
+                    <div
+                      *ngIf="
+                        details.get('confirmPassword')?.hasError('required') &&
+                        details.get('confirmPassword')?.touched
+                      "
+                    >
+                      Password confirmation is required
+                    </div>
+                  </div>
           </div>
         </div>
-        <div class="col-md-12">
-          <label for="lastName">Last Name</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="lastName"
-            id="lastName"
-          />
-          <div
-            *ngIf="
-              details.get('lastName')?.hasError('required') &&
-              details.get('lastName')?.touched">
-            Please enter first Name
+        <div class="btn">
+            <button class="btn btn-primary" [disabled]="!details.valid">
+                  Register
+            </button>
           </div>
-        </div>
-        <div class="col-md-12">
-          <label for="email"> Email: </label>
-          <input
-            class="form-control"
-            id="email"
-            type="email"
-            formControlName="email"
-          />
-          <div
-            *ngIf="
-              details.get('email')?.hasError('required') &&
-              details.get('email')?.touched
-            "
-          >
-            Please enter your Email
-          </div>
-        </div>
-        <div class="col-md-12">
-          <label for="phone"> Phone Number: </label>
-          <input
-            id="phone"
-            class="form-control"
-            type="tel"
-            formControlName="phoneNumber"
-            [class.invalid]="details.get('phoneNumber')?.invalid"
-          />
-        </div>
-        <div class="col-md-12">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            formControlName="password"
-            id="password"
-          />
-          <div
-            *ngIf="
-              details.get('password')?.hasError('required') &&
-              details.get('password')?.touched
-            "
-          >
-            Password is required
-          </div>
-        </div>
-      </div>
-      <button class="btn" [disabled]="!details.valid">
-        Save
-      </button>
-    </form>
+          <div class="exist">
+              <p>Already have an account? <a href="#" target="_blank">Login</a></p>
+            </div>
+      </form>
+    </div>
   </div>
+  
 </div>
