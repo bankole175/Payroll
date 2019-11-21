@@ -8,13 +8,15 @@ import { RouterModule } from '@angular/router'
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PayrollComponent } from './payroll/payroll.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    PayrollComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'sign-in', component: SignInComponent },
-      { path: 'sign-up', component: SignUpComponent }
+      { path: 'sign-up', component: SignUpComponent },
+      { path: 'payroll', component: PayrollComponent }
     ]),
     ReactiveFormsModule
   ],
