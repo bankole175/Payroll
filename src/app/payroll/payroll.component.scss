@@ -15,15 +15,16 @@
     color: #4F4F4F;
     font-weight: 500;
 
+    p {
+        text-transform: uppercase;
+    }
+
     .bar {
         position: absolute;
-        right: 10px;
-        top: 10px;
+        right: 20px;
+        top: 1px;
 
-    ul {
-        // display: flex;
-
-     li {
+     .menu li {
         list-style: none;
         padding: 1px;
         // border: 1px solid #4F4F4F;
@@ -38,21 +39,95 @@
 }
 }
 
-.menu .sub ul li a {
-    display: block;
-    visibility: hidden;
+.payslip {
+    width: 95%;
+    height: 88%;
+    top: 50%;
+    left: 50%;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background: #fff;
+    padding: 40px 30px;
+
+    .heading {
+        text-align: center;
+        text-transform: uppercase;
+        color: gray;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+
+    .pay {
+        color: gray;
+        float: right;
+    }
 }
 }
 
-// .payslip {
-//     width: 95%;
-//     height: 85%;
-//     top: 50%;
-//     left: 50%;
-//     position: absolute;
-//     transform: translate(-50%, -50%);
-//     box-sizing: border-box;
-//     background: #fff;
-//     padding: 40px 30px;
-// }
+.sub li{
+    // position: absolute;
+    display: none;
+    // opacity: 0;
+    // visibility: hidden;
+    // z-index: 1;
+}
+
+.menu li:hover > .sub{
+    z-index: 99;
+    display: block;
+    // opacity: 1;
+    // visibility: visible;
+}
+
+.add {
+    color: gray;
+    font-weight: 500;
+}
+
+.employee {
+    margin-top: 3px;
+    color: gray;
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 700;
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+}
+.edge {
+    position: absolute;
+    right: 10px;
+    color: gray;
+}
+
+tbody tr {
+    border: 1px solid rgba(199, 197, 197, 0.8) !important;
+
+    .first {
+        color: gray;
+        font-weight: 600;
+    }
+}
+
+.net {
+    color: gray;
+        font-weight: 600;
+}
+.buttn {
+    padding: 0.6rem;
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .payslip {
+        height: 100% !important;
+    }
 }
