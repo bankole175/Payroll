@@ -9,12 +9,16 @@
     padding: 0;
 
 .head {
-    // display: flex;
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
     color: #4F4F4F;
     font-weight: 500;
 
+    a {
+        text-decoration: none;
+        color: #4F4F4F;
+    }
+    
     p {
         text-transform: uppercase;
     }
@@ -24,19 +28,13 @@
         right: 20px;
         top: 1px;
 
-     .menu li {
-        list-style: none;
-        padding: 1px;
-        // border: 1px solid #4F4F4F;
-        // background: #ffffff;
-
-        a{
-            color: rgba(0, 0, 0, 0.8);
-            font-size: 0.8rem;
-            display: block;
+        .rad {
+            border-radius: 1rem;
+            padding: 0.3rem;
+            box-shadow: none;
+            border: none;
         }
     }
-}
 }
 
 .payslip {
@@ -116,12 +114,15 @@ tbody tr {
     color: gray;
         font-weight: 600;
 }
-.buttn {
-    padding: 0.6rem;
-    display: inline-block;
-    background-color: #fff;
-    border: 2px solid #fff;
-    border-radius: 1rem;
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 

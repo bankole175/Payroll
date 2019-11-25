@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PayrollComponent } from './payroll/payroll.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PayrollComponent } from './payroll/payroll.component';
     HomeComponent,
     SignInComponent,
     SignUpComponent,
-    PayrollComponent
+    PayrollComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { PayrollComponent } from './payroll/payroll.component';
       { path: '', component: HomeComponent },
       { path: 'sign-in', component: SignInComponent },
       { path: 'sign-up', component: SignUpComponent },
-      { path: 'payroll', component: PayrollComponent }
+      { path: 'payroll', component: PayrollComponent },
+      { path: 'employee', component: EmployeeComponent }
     ]),
     ReactiveFormsModule
   ],

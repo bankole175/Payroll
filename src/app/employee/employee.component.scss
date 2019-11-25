@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.main {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+    .head {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    color: #4F4F4F;
+    font-weight: 500;
+
+    a {
+        text-decoration: none;
+        color: #4F4F4F;
+
+        p {
+            text-transform: uppercase;
+        }
+    }
+
+    }
+
+    .employee {
+        width: 95%;
+        height: 88%;
+        top: 50%;
+        left: 50%;
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        background: #fff;
+        padding: 40px 30px;
+
+        .emp {
+            display: inline-flex;
+        }
+
+        .add {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            padding: 0.3rem;
+            display: inline-block;
+            background: #fccb82;
+            color: #4F4F4F;
+            border-radius: 1rem;
+
+            a {
+                color: #4F4F4F;
+            }
+        }
+
+        .search a {
+            position: absolute;
+            text-align: center;
+            background: #fccb82;
+            color: #4F4F4F;
+            padding: 0.4rem;
+            width: 205px;
+            text-decoration: none;
+        }
+
+        .now {
+            display: inline-flex;
+            font-weight: 300;
+            color: #4F4F4F;
+            .ib {
+                background: rgb(160, 158, 158);
+                color: #fff;
+                text-align: center;
+                padding: 0.2rem;
+                width: 30px;
+                border-radius:50px;
+            }
+        }
+    }
+}
+
+.rad {
+    border-radius: 1rem;
+    padding: 0.3rem;
+    box-shadow: none;
+    border: 0.5px solid rgb(172, 171, 171);
+}
+
+.generate a {
+    white-space: nowrap;
+    text-align: center;
+    background: #fccb82;
+    color: #4F4F4F;
+    padding: 0.4rem;
+    text-decoration: none;
+}
+
+// small {
+//     position: absolute;
+//     top: 76%;
+//     left: 14%;
+//     font-size: 0.7rem;
+//     color: #4F4F4F;
+// }
+
+table {
+    color: #4F4F4F;
+}
+
+.big-table {
+    overflow-x: auto;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 510px) {
+    .ib {
+        width: 50px !important;
+        height: 50% !important;
+        border-radius: 50% !important;
+    }
+}
+
+@media screen and (min-width: 511px) and (max-width: 784px) {
+    .ib {
+        width: 40% !important;
+        height: 40% !important;
+        border-radius: 50% !important;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .search a {
+        position: relative !important;
+        border-radius: 1rem;
+    }
+}
