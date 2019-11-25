@@ -1,0 +1,148 @@
+<div class="main">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <header>
+    <div class="head">
+      <a href="#">
+        <p><i class="fa fa-diamond fa_custom fa-1x"></i> dtech</p></a
+      >
+    </div>
+  </header>
+  <div class="employee">
+    <div class="emp">
+      <p>Employee Salary</p>
+      <div class="add">
+        <a href="#">Add Salary</a>
+      </div>
+    </div>
+    <!-- <form> -->
+    <div class="row">
+      <div class="form-group col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          id="input1"
+          placeholder="Employee Name"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option disabled>Role</option>
+          <option>Executives</option>
+          <option>Manager</option>
+          <option>Senior staff</option>
+          <option>Junior Staff</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option disabled>Loan Status</option>
+          <option>No Loan Taken</option>
+          <option>Pending</option>
+          <option>Approved</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group all-date col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          id="example-date-input"
+          placeholder="From"
+          onfocus="(this.type='date')"
+        />
+      </div>
+      <div class="form-group all-date col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          id="example-date-input"
+          placeholder="To"
+          onfocus="(this.type='date')"
+        />
+      </div>
+      <div class="search col-md-4">
+        <a href="#">Search</a>
+      </div>
+    </div>
+    <!-- </form> -->
+    <div class="big-table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Employee</th>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Payslip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="now">
+              <div class="ib">E</div>
+               Emma Neuer
+            </th>
+            <td>JW-134</td>
+            <td>emma20@gmail.com</td>
+            <td>
+              <select class="rad">
+                <option>Executives</option>
+                <option>Manager</option>
+                <option>Senior staff</option>
+                <option>Junior Staff</option>
+              </select>
+            </td>
+            <td class="generate">
+              <a href="#">Generate slip</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="now">
+              <div class="ib">J</div>
+              Joel Jason
+            </th>
+            <td>JW-128</td>
+            <td>jason324@gmail.com</td>
+            <td>
+              <select class="rad">
+                <option>Executives</option>
+                <option>Manager</option>
+                <option>Senior staff</option>
+                <option>Junior Staff</option>
+              </select>
+            </td>
+            <td class="generate">
+              <a href="#">Generate slip</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="now">
+              <div class="ib">L</div>
+              Larry Fred
+            </th>
+            <td>JR-257</td>
+            <td>freddy60@gmail.com</td>
+            <td>
+              <select class="rad">
+                <option>Executives</option>
+                <option>Manager</option>
+                <option>Senior staff</option>
+                <option>Junior Staff</option>
+              </select>
+            </td>
+            <td class="generate">
+              <a href="#">Generate slip</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
