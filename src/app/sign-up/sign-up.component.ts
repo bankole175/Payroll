@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent{
+export class SignUpComponent {
   details: FormGroup;
 
   constructor(fb: FormBuilder) {
