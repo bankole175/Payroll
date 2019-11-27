@@ -1,3 +1,4 @@
+@import '../../assets/scss/vaiable';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 .main {
@@ -6,23 +7,6 @@
     background-size: cover;
     margin: 0;
     padding: 0;
-
-    .head {
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px;
-    color: #4F4F4F;
-    font-weight: 500;
-
-    a {
-        text-decoration: none;
-        color: #4F4F4F;
-
-        p {
-            text-transform: uppercase;
-        }
-    }
-
-    }
 
     .employee {
         width: 95%;
@@ -52,6 +36,7 @@
 
             a {
                 color: #4F4F4F;
+                text-decoration: none;
             }
         }
 

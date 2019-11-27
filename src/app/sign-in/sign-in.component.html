@@ -1,4 +1,12 @@
+<head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
 <div class="main">
+  <div class="head">
+      <a href="#" routerLink="/"> <p> <i class="fa fa-diamond fa_custom fa-1x"></i> DTECH</p></a>
+  </div>
     <div class="field">
         <div class="container col-md-12">
       <div class="heading">Login</div>
@@ -39,12 +47,12 @@
           </div>
         </div>
         <div class="btn">
-          <button class="btn btn-primary" [disabled]="!details.valid">
-                Save
+          <button class="btn btn-primary"  routerLink="/employee" [disabled]="!details.valid">
+                Login
           </button>
         </div>
         <div class="exist">
-            <p>Didn't have an account?  <a href="#" target="_blank">Register</a></p>
+            <p>Didn't have an account?  <a href="#" routerLink="/sign-up">Register</a></p>
           </div>
       </form>
     </div>
