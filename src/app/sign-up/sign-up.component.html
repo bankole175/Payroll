@@ -1,4 +1,12 @@
+<head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
 <div class="main">
+    <div class="head">
+        <a href="#" routerLink="/"> <p> <i class="fa fa-diamond fa_custom fa-1x"></i> DTECH</p></a>
+    </div>
     <div class="field">
         <div class="container col-md-12">
       <div class="heading">Sign Up</div>
@@ -14,7 +22,7 @@
                   />
                   <div
                     *ngIf="details.get('firstName')?.hasError('required') &&
-                      details.get('firstName')?.touched">
+                      details.get('firstName')?.touched" class="inv">
                     Please enter First Name
                   </div>
                 </div>
@@ -28,7 +36,7 @@
                   <div
                     *ngIf="
                       details.get('lastName')?.hasError('required') &&
-                      details.get('lastName')?.touched">
+                      details.get('lastName')?.touched" class="inv">
                     Please enter Last Name
                   </div>
                 </div>
@@ -45,8 +53,7 @@
                     *ngIf="
                       details.get('email')?.hasError('required') &&
                       details.get('email')?.touched
-                    "
-                  >
+                    " class="inv">
                     Please enter your Email
                   </div>
                 </div>
@@ -58,7 +65,6 @@
                     type="tel"
                     placeholder="Phone Number"
                     formControlName="phoneNumber"
-                    [class.invalid]="details.get('phoneNumber')?.invalid"
                   />
                 </div>
           </div>
@@ -74,8 +80,7 @@
                     *ngIf="
                       details.get('password')?.hasError('required') &&
                       details.get('password')?.touched
-                    "
-                  >
+                    " class="inv">
                     Password is required
                   </div>
                 </div>
@@ -90,20 +95,19 @@
                       *ngIf="
                         details.get('confirmPassword')?.hasError('required') &&
                         details.get('confirmPassword')?.touched
-                      "
-                    >
+                      " class="inv">
                       Password confirmation is required
                     </div>
                   </div>
           </div>
         </div>
         <div class="btn">
-            <button class="btn btn-primary" [disabled]="!details.valid">
+            <button class="btn btn-primary" routerLink="/sign-in" [disabled]="!details.valid">
                   Register
             </button>
           </div>
           <div class="exist">
-              <p>Already have an account? <a href="#" target="_blank">Login</a></p>
+              <p>Already have an account? <a href="#" target="_blank" routerLink="/sign-in">Login</a></p>
             </div>
       </form>
     </div>
